@@ -1,5 +1,5 @@
 import time
-
+### Cool little ASCII intro, with timing to make it more dynamic
 print(""" ____      ____      __                                     
 |_  _|    |_  _|    [  |                                    
   \ \  /\  / /.---.  | |  .---.   .--.   _ .--..--.  .---.  
@@ -21,18 +21,18 @@ print("""███████╗██████╗ ██╗   ██╗█�
 ██║     ██║  ██║╚██████╔╝██║   ██║      ██║██║ ╚████║██║  ██║   ██║   ╚██████╔╝██║  ██║     █████╔╝╚██████╔╝╚██████╔╝╚██████╔╝
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝   ╚═╝      ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝     ╚════╝  ╚═════╝  ╚═════╝  ╚═════╝ 
                                                                                                                               """)
-time.sleep(1)
+time.sleep(1) ### earlier I had a bunch of these commands on almost every line, but it made it a pain to test the code so I only kept the minimum
 confirm = 2
-while confirm == 2:
+while confirm == 2:### Using a While Loop so users can refill this form if they messed up the first time
     print("What is your age? (years)")
-    while True:
+    while True:### This while loop is for when users enter a character that is not a number, so they don't have to restart the program if they mistype. I used it in all the fields where I require a number to be inputed
         try:
             age = int(input())
             break
         except ValueError:
             print("Please enter a number")
         continue
-    print("How tall are you? (feet)")
+    print("How tall are you? (feet)") ### I didn't want users to have to figure out what their height is in inches so I ask for their height in the #'#" format
     while True:
         try:
             height_feet = int(input())
@@ -67,7 +67,7 @@ while confirm == 2:
     1. Yes
     2. No
     """)
-    while True:
+    while True:  ### it took me a while to understand how to use While Loops
         try:
             confirm = int(input())
             break
@@ -76,7 +76,7 @@ while confirm == 2:
         continue
     continue
 
-true_height = (height_feet * 12) + height_inches
+true_height = (height_feet * 12) + height_inches  ### I figured this was the best place to convert the height into inches
 
 print("""Pick a Fruit
 1. Apple
@@ -94,12 +94,12 @@ while True:
             print("Please enter a number")
         continue
 print("Calculating...")
-time.sleep(5)
-if fruit == 1:
+time.sleep(5)    ### Timing to make users think its working hard
+if fruit == 1:           ### I know they were necessary for this, but I have seen some horrendous If statement usage by a certain game developer and it makes me feel dirty using them.
     apple_height = 4
     apple_weight = float(.33)
     apple_age = 6
-    print("You are approximately " + str(true_height/apple_height) + " Apples tall")
+    print("You are approximately " + str(true_height/apple_height) + " Apples tall") ### Can you tell I copied and pasted most of these?
     print("You weigh as much as " + str(weight/apple_weight) + " apples")
     print("If an apple tree was planted the day you were born, then under ideal conditions the tree would have produced " + str(age - apple_age) + " harvests")
 elif fruit == 2:
