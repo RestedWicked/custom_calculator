@@ -26,7 +26,7 @@ confirm = 2
 while confirm == 2:### Using a While Loop so users can refill this form if they messed up the first time
     print("What is your age? (years)")
     while True:### This while loop is for when users enter a character that is not a number, so they don't have to restart the program if they mistype. I used it in all the fields where I require a number to be inputed
-        try:
+        try: ### I would not have figured it out on my own I found the code here https://www.includehelp.com/python/asking-the-user-for-integer-input-in-python-limit-the-user-to-input-only-integer-value.aspx
             age = int(input())
             break
         except ValueError:
